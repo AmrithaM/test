@@ -1,0 +1,116 @@
+body {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
+
+.header {
+    /*padding:30px 50px;*/
+    cursor:pointer;
+    font-size:24px;
+}
+
+/***********************************************************************
+ *  Nav Bar
+ **********************************************************************/
+.main-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    font-size: 0.7em;
+}
+
+li {
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+li img{
+    width: 10rem;
+    /*margin: 0 20px;*/
+}
+
+/***********************************************************************
+ *  Cover
+ **********************************************************************/
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cover {
+    width: 90vw;
+}
+
+.overlay{
+    width: 300px;
+    background: #D64C31;
+    color: #FFF0E7;
+    position: absolute;
+    top: 70%;
+    left: 4.4%;
+    padding: 1rem;
+}
+
+.overlay h4{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+/***********************************************************************
+ *  Grid Panel
+ **********************************************************************/
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.box {
+    background-color: #444;
+    padding: 130px;
+    margin: 20px;
+}
+
+.box > img {
+    width: 100%;
+    height: auto;
+}
+
+/***********************************************************************
+ *  Footer
+ **********************************************************************/
+footer {
+    text-align: center;
+    background-color: #444;
+}
+
+/***********************************************************************
+ *  Small screen size
+ **********************************************************************/
+@media only screen and (max-width: 600px) {
+    .main-nav {
+        font-size: 0.5em;
+        padding: 0;
+    }
+
+    .cover{
+        margin: 0 20px;
+        width: 100%;
+    }
+
+    .overlay{
+        
+    }
+
+    .overlay h4{
+        
+    }
+}
