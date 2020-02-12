@@ -3,15 +3,11 @@ html, body {
     width:100%;
     margin:0;
     padding:0;
-}
-
-body {
     font-family: 'Montserrat', sans-serif;
-    padding: 10px;
 }
 
 .header {
-    margin: 0 10px;
+    /*margin: 0 10px;*/
     cursor:pointer;
     font-size:24px;
 }
@@ -20,9 +16,8 @@ body {
  *  Nav Bar
  **********************************************************************/
 .main-nav {
-    display: flex;
-    list-style: none;
-    margin: 0;
+    padding: 0;
+    margin-left: 5%;
     font-size: 0.7em;
 }
 
@@ -33,11 +28,16 @@ li {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #4A455C;
 }
 
 li img{
     width: 10rem;
+}
+
+ul{
+    list-style: none;
+    display: flex;
 }
 
 /***********************************************************************
@@ -93,7 +93,7 @@ li img{
     position: relative;
 }
 
-.carousel .welcome, .carousel span{
+.carousel .welcome{
     color: #4A455C;
     font-weight: bolder;
     font-size: 2rem;
@@ -127,6 +127,10 @@ li img{
     width: 55px;
     height: 55px;
     cursor: pointer;
+}
+
+.carousel span, .footer .title{
+    font-size: 1.5rem;
 }
 
 /***********************************************************************
@@ -167,7 +171,7 @@ li img{
 }
 
 .ml5{
-    margin-left: 5%;
+    margin-left: 5% !important;
 }
 
 
@@ -176,14 +180,44 @@ li img{
  **********************************************************************/
 footer{
     margin-top: 5%;
+    width: 100%;
+    background-color: #D64C31;
+    color: #FFFFFF;
+    position: relative;
 }
 
 .footer{
-    background-color: #D64C31;
-    height: 300px;
-    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
 }
 
+.footer img{
+    padding: 2.5% 0;
+    width: 8rem;
+}
+
+.footer a{
+    color: #FFFFFF;
+}
+
+.footer .title, .footer-nav, .footer .desc{
+    flex-basis: 100%;
+}
+
+.footer-nav{
+    padding: 0;
+    margin: 2.5% 0;
+    font-weight: bolder;
+}
+
+.footer-nav li:first-child{
+    padding-left: 0;
+}
+
+.footer .copyrights{
+    font-weight: bolder;
+}
 
 /***********************************************************************
  *  Small screen size
@@ -195,6 +229,7 @@ footer{
 
     .main-nav {
         padding: 0;
+        margin-left: 0;
     }
 
     li{
@@ -203,7 +238,7 @@ footer{
     }
 
     li img{
-        width: 5rem;
+        width: 8rem;
     }
 
     .overlay{
@@ -213,7 +248,7 @@ footer{
     }
 
     .overlay span, .info .title, .carousel .welcome, .carousel span{
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
     .carousel button{
@@ -221,12 +256,15 @@ footer{
         height: 50%;
     }
 
-    .info{
-        /*width: 100%;*/
-
+    .info .desc, .overlay, .info .date, .carousel p, .footer .desc, .footer .copyrights{
+        font-size: 0.7rem;
     }
 
-    .info .desc, .overlay, .info .date, .carousel p{
-        font-size: 0.7rem;
+    .carousel span, .footer .title{
+        font-size: 1.25rem;
+    }
+
+    .footer img {
+        padding: 5% 0;
     }
 }
