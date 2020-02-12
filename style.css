@@ -28,6 +28,7 @@ body {
 
 li {
     padding: 10px;
+    cursor: pointer;
 }
 
 a {
@@ -37,7 +38,6 @@ a {
 
 li img{
     width: 10rem;
-    /*margin: 0 20px;*/
 }
 
 /***********************************************************************
@@ -47,7 +47,13 @@ li img{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.overlay-parent{
     position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .cover {
@@ -56,13 +62,13 @@ li img{
 }
 
 .overlay{
-    width: 300px;
+    width: 45%;
     background: #D64C31;
     color: #FFF0E7;
     position: absolute;
-    top: 70%;
-    left: 4.4%;
+    bottom: 0;
     padding: 1rem;
+    text-align: center;
 }
 
 .overlay span{
@@ -70,6 +76,57 @@ li img{
     font-size: 2rem;
     font-weight: 500;
     margin: 0 auto;
+}
+
+/***********************************************************************
+ *  Carousel
+ **********************************************************************/
+.carousel-parent{
+    flex-basis: 100%;
+    width: 80%;
+}
+
+.carousel{
+    background-color: #E8F1EE;
+    margin-left: 5%;
+    padding: 5%;
+    position: relative;
+}
+
+.carousel .welcome, .carousel span{
+    color: #4A455C;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.carousel img{
+    max-width: 100%;
+    width: 75vw;
+    margin-top: 5%;
+}
+
+.carousel .date{
+    color: #D64C31;
+}
+
+.carousel span{
+    font-size: 1.75rem;
+}
+
+.carousel-buttons{
+    position: absolute;
+    left: 80%;
+    top: 16%;
+}
+
+.carousel button{
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
 }
 
 
@@ -90,7 +147,7 @@ footer {
     }
 
     .main-nav {
-        font-size: 0.75em;
+        font-size: 0.5em;
         padding: 0;
     }
 
@@ -104,11 +161,18 @@ footer {
     }
 
     .overlay{
-        width: 150px;
-        font-size: 0.5rem;
+        width: 200px;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        top: unset; 
     }
 
     .overlay span{
-        font-size: 1rem;
+        font-size: 1.75rem;
     }
+
+    .carousel button{
+        width: 50%;
+        height: 50%;
+}
 }
